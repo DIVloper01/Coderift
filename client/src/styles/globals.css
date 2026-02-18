@@ -1,0 +1,165 @@
+:root {
+  --bg-primary: #0A0E1A;
+  /* Deep Navy */
+  --bg-secondary: #060810;
+  /* Pure Black */
+  --bg-tertiary: #131620;
+  --text-primary: #f0fdfa;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --accent-teal: #00F5D4;
+  --accent-violet: #7B2FBE;
+  --success: #10b981;
+  --error: #ef4444;
+  --warning: #f59e0b;
+  /* CSS Updated: Fix Layout Reflow */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Rajdhani', sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  background-image: radial-gradient(rgba(0, 245, 212, 0.03) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 0.05em;
+}
+
+code,
+pre {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Glassmorphism utilities */
+.glass {
+  background: rgba(10, 14, 26, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 245, 212, 0.1);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.glass-teal {
+  background: linear-gradient(135deg, rgba(0, 245, 212, 0.05), rgba(0, 0, 0, 0));
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 245, 212, 0.2);
+  box-shadow: 0 0 15px rgba(0, 245, 212, 0.05);
+}
+
+.glass-violet {
+  background: linear-gradient(135deg, rgba(123, 47, 190, 0.05), rgba(0, 0, 0, 0));
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(123, 47, 190, 0.2);
+  box-shadow: 0 0 15px rgba(123, 47, 190, 0.05);
+}
+
+.glass-strong {
+  background: rgba(10, 14, 26, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 245, 212, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* Gradient backgrounds */
+.gradient-text-teal {
+  background: linear-gradient(to right, #00F5D4, #2dd4bf);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.gradient-text-mix {
+  background: linear-gradient(to right, #00F5D4, #7B2FBE);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Animations */
+@keyframes grid-move {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(30px);
+  }
+}
+
+.animate-grid {
+  animation: grid-move 5s linear infinite;
+}
+
+.hover-glow-teal {
+  transition: all 0.3s ease;
+}
+
+.hover-glow-teal:hover {
+  box-shadow: 0 0 20px rgba(0, 245, 212, 0.4);
+  border-color: rgba(0, 245, 212, 0.5);
+}
+
+.hover-glow-violet {
+  transition: all 0.3s ease;
+}
+
+.hover-glow-violet:hover {
+  box-shadow: 0 0 20px rgba(123, 47, 190, 0.4);
+  border-color: rgba(123, 47, 190, 0.5);
+}
+
+/* Button styles */
+/* Button styles removed to use inline Tailwind */
+/* Input styles */
+/* Input styles removed to use inline Tailwind */
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--accent-teal);
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-teal);
+}
+
+/* Monaco Editor Overrides */
+.monaco-editor-container {
+  @apply border border-rift-teal/20 rounded-sm overflow-hidden;
+}
+
+/* Backgrounds */
+.bg-scanline {
+  background: linear-gradient(to bottom,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0) 50%,
+      rgba(0, 0, 0, 0.1) 50%,
+      rgba(0, 0, 0, 0.1));
+  background-size: 100% 4px;
+}

@@ -1,4 +1,4 @@
-# CodeArena - Real-Time Coding Contest Platform
+# Coderift - Real-Time Coding Contest Platform
 
 A production-grade full-stack web application for hosting real-time coding contests with automated judging, live leaderboards, and modern UI/UX.
 
